@@ -1,0 +1,53 @@
+.open-search,
+.slide-out header .slide-out-share,
+header div.right-icons a.share{
+    display: none;
+}
+
+.slide-out-popup {
+    right: 5px;
+}
+
+.education .item:nth-child(1) .content {
+    top: -150px;
+}
+
+.education .item:nth-child(even) .content {
+    bottom: -120px;
+}
+
+/* Sticky Header */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.sections-wrapper > section {
+    padding: 182px 12px !important;
+}
+
+
+.sections-wrapper > section#section1 {
+    padding-bottom: 0 !important;
+}
+
+.slide-out .slide-out-widgets .social .service {
+    padding: 12px 0;
+}
+
+section#section1 > .container > .row > div {
+    height: 650px;
+}
+
+a {
+    color: #3f51b5;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+span.underline {
+    text-decoration: underline;
+}
