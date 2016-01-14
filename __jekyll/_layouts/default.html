@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+{% comment %}
 <!DOCTYPE html>
 <html>
 
@@ -17,4 +21,24 @@
 
   </body>
 
+</html>{% endcomment %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+  {% include head.html %}
+
+<body>
+  {% include header.html %}
+
+  <!-- Sections -->
+  <div class="sections">
+    <div class="sections-wrapper clearfix">
+      {{ content }}
+    </div>
+    <!-- end .sections-wrapper -->
+  </div>
+  <!-- end .sections -->
+ {% include footer.html %}
+</body>
 </html>

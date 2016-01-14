@@ -6,6 +6,7 @@ echo ""
 echo "### Cleaning up resources"
 cd ../
 ls | grep -v '__jekyll' | xargs rm -rf
+rm -f .gitignore .nojekyll
 cd -
 echo ""
 echo "### Running jekyll"
