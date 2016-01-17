@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% comment %}
 <article class="post">
 
   <header class="post-header">
@@ -12,3 +13,17 @@ layout: default
   </div>
 
 </article>
+{% endcomment %}
+
+<!-- Page start -->
+<section id="section2">
+  <div class="container">
+    <h2>{{ page.title }}</h2>
+    <div class="row">
+      {{ content }}
+    </div>
+    <!-- end .row -->
+  </div>
+  <!-- end .container -->
+</section>
+<!-- end #section1 -->

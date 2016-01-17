@@ -1,3 +1,4 @@
+# repo: https://github.com/bbakersmith/jekyll-pages-directory
 module Jekyll
   class PagesDirGenerator < Generator
     def generate(site)

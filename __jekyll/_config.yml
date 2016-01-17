@@ -16,7 +16,16 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.burgermeiszter.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
-github_username:  jekyll
+github:
+  username:  zburgermeiszter
+  repo: zburgermeiszter.github.io
+
+blog:
+  footer:
+    author:
+      image: "/images/avatar/zoltan.burgermeiszter.jpg"
+      description: >
+        Cloud Developer, Linux, Docker and VoIP fanatic. Always looking for innovative technologies to make things faster, cheaper, easier.
 
 # Build settings
 markdown: kramdown
@@ -30,7 +39,18 @@ defaults:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /posts/:title/
 
+category_archive:
+  path: /categories
+  slugify: true
+
+tag_dir: tags
 
 compress_html:
   comments: all

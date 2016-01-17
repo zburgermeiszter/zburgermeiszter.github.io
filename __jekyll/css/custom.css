@@ -23,7 +23,8 @@ header div.right-icons a.share{
     z-index: 99;
 }
 
-.sections-wrapper > section {
+.sections-wrapper > section,
+.sections-wrapper > article.blog {
     padding: 182px 12px !important;
 }
 
@@ -50,4 +51,123 @@ span.bold {
 
 span.underline {
     text-decoration: underline;
+}
+
+.single-blog-post .blog-post {
+    float: initial;
+    width: 100%;
+}
+
+.single-blog-post .blog-header .content {
+    width: 100%;
+}
+
+.single-blog-post .blog-post .hr {
+    background: #fff;
+    padding: 0 40px;
+}
+
+.single-blog-post .blog-post .hr hr {
+    margin: 0;
+}
+
+.single-blog-post .blog-post .blog-post-footer {
+    background: #fff;
+    padding: 10px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    text-align: right;
+}
+
+.single-blog-post .blog-post .blog-post-footer .author {
+    text-align: left;
+    display: inline-block;
+    margin: 15px 0px;
+    min-height: 80px;
+}
+
+.single-blog-post .blog-post .blog-post-footer .author p {
+    float: left;
+    display: inline-block;
+    width: 100%;
+    padding-left: 100px;
+}
+
+.single-blog-post .blog-post .blog-post-footer .author .image {
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.single-blog-post .blog-post .blog-post-footer .author .title {
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #232323;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    display: inline-block;
+    padding-left: 100px;
+}
+
+.single-blog-post .blog-post .blog-post-footer p {
+    margin: 0;
+}
+
+.single-blog-post .blog-header .content {
+    height: initial;
+    padding-bottom: 0;
+}
+
+.single-blog-post .blog-header .title {
+    font-size: 42px;
+    line-height: 52px;
+}
+
+.single-blog-post .blog-header .content p,
+.single-blog-post .blog-header .content .date {
+    margin-bottom: 0;
+}
+
+.single-blog-post .blog-header .content .created-on {
+    margin-bottom: 12px;
+}
+
+.blog-post .noshadow {
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.blog-post .shadow {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.page-navigation {
+    font-size: 14px;
+    display: block;
+    width: auto;
+    overflow: hidden;
+}
+
+.page-navigation a {
+    display: block;
+    width: 50%;
+    float: left;
+    margin: 1em 0;
+}
+
+.page-navigation .prev {
+    text-align: left;
+}
+
+.page-navigation .next {
+    text-align: right;
 }
