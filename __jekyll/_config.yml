@@ -44,13 +44,13 @@ defaults:
       path: ""
       type: "posts"
     values:
-      permalink: /posts/:title/
+      permalink: /blog/:title/
 
 category_archive:
-  path: /categories
+  path: /blog/categories
   slugify: true
 
-tag_dir: tags
+tag_dir: /blog/tags
 
 compress_html:
   comments: all

@@ -2,6 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 categories: jekyll update
+series: test
 tags:
   - jekyll
   - syntax-highlight

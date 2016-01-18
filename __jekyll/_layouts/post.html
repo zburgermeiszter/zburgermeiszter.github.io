@@ -24,6 +24,9 @@ layout: default
       <div class="blog-post">
         <header class="blog-header clearfix shadow">
           <div class="content noshadow">
+            {% comment %}
+            <a href="{{ page.url }}">permalink</a>
+            {% endcomment %}
             <h1 class="title">{{ page.title }}</h1>
             <p class="created-on">
               <span class="bold">Created on: </span><span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
@@ -47,6 +50,11 @@ layout: default
               <a href="/{{ site.tag_dir }}/{{ tag }}/">#{{ tag | downcase }}</a>
 
               {% endfor %}
+              <span class="right">
+                <a href="https://github.com/{{ site.github.username }}/{{ site.github.repo }}/edit/master/__jekyll/{{ page.path }}">Improve this post</a>
+                |
+                <a href="https://github.com/{{ site.github.username }}/{{ site.github.repo }}/issues/new">Report an issue</a>
+              </span>
             </p>
             {% comment %}<span class="meta"><a href="#">7 Comments</a> | <a href="#">By Admin</a></span>{% endcomment %}
             {% comment %}
@@ -54,12 +62,14 @@ layout: default
               <p class="button-row blog-button-row"><a href="#" class="button solid-button dark">Prev</a><a href="#" class="button solid-button purple">Next</a></p>
             </div>
             {% endcomment %}
+            <div class="hr"></div>
           </div> <!-- end .content -->
           {% comment %}
           <div class="image" style="background-image: url('images/single-blog-post-image.jpg');"></div>
           {% endcomment %}
         </header> <!-- end .blog-header -->
         <section class="blog-post-content">
+          {% series_list %}
           {{ content }}
           {% comment %}
           <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni saga dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor site amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore manusia magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporlais suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
@@ -71,16 +81,21 @@ layout: default
           <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placey eat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibus dalmo aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molstiae non-sec recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores aliasarat consequatur aut perferendis doloribus asperiores repellat</p>
           {% endcomment %}
         </section> <!-- end .blog-post-content -->
-        <div class="hr">
-          <hr>
-        </div>
         <div class="blog-post-footer">
-
-            <div class="author">
-              <div class="image"><img src="{{ site.blog.footer.author.image }}" alt="Zoltan Burgermeiszter" class="img-responsive"></div>
-              <span class="title">{{ site.author }}</span>
-              <p>{{ site.blog.footer.author.description }}</p>
-            </div>
+          <div class="hr"></div>
+          <div class="page-navigation">
+            {% if page.previous.url %}
+            <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+            {% endif %}
+          </div>
+          <div class="author">
+            <div class="image"><img src="{{ site.blog.footer.author.image }}" alt="Zoltan Burgermeiszter" class="img-responsive"></div>
+            <span class="title">{{ site.author }}</span>
+            <p>{{ site.blog.footer.author.description }}</p>
+          </div>
 
           {% comment %}
           <section class="author">
@@ -93,21 +108,6 @@ layout: default
             </article>
           </section>
           {% endcomment %}
-
-          <div class="page-navigation">
-            {% if page.previous.url %}
-            <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-            {% endif %}
-            {% if page.next.url %}
-            <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-            {% endif %}
-          </div>
-
-          <a href="https://github.com/{{ site.github.username }}/{{ site.github.repo }}/edit/master/__jekyll/{{ page.path }}">Improve this post</a>
-          <br>
-          <a href="{{ page.url }}">permalink</a>
-          <br>
-
         </div>
         <div class="blog-post-comments">
           <h4>7 Comments</h4>

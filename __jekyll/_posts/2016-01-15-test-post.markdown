@@ -1,6 +1,7 @@
 ---
 layout: post
 categories: jekyll update
+series: test
 tags:
   - jekyll
   - syntax-highlight
