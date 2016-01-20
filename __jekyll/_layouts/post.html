@@ -27,35 +27,35 @@ layout: default
             {% comment %}
             <a href="{{ page.url }}">permalink</a>
             {% endcomment %}
-            <h1 class="title">{{ page.title }}</h1>
+            <a href="{{ page.url }}" class="permalink"><h1 class="title">{{ page.title }}</h1></a>
             <p class="created-on">
-              <span class="bold">Created on: </span><span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
-            </p>
-            <p>
-              <span class="bold">Posted in:</span>
+              <span class="bold">Posted on: </span>
+              <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+              in
               {% for category in page.categories %}
 
                 {% categorylink category %}{{ category | capitalize }}{% endcategorylink %}
 
-                {% if forloop.last != true %}
-                  <span>|</span>
-                {% endif %}
+                  {% if forloop.last != true %}
+                    <span>|</span>
+                  {% endif %}
 
               {% endfor %}
             </p>
             <p>
-              <span class="bold">Tags:</span>
-              {% for tag in page.tags %}
-
-              <a href="/{{ site.tag_dir }}/{{ tag }}/">#{{ tag | downcase }}</a>
-
-              {% endfor %}
+              <span class="bold">Reading time: </span>
+              {% if page.content | readtime == 0 %}
+                less than a minute
+              {% else %}
+                {{ page.content | readtime | pluralize: "minute" }}
+              {% endif %}
               <span class="right">
                 <a href="https://github.com/{{ site.github.username }}/{{ site.github.repo }}/blob/master/__jekyll/{{ page.path }}">Improve this post</a>
                 |
                 <a href="https://github.com/{{ site.github.username }}/{{ site.github.repo }}/issues/new">Report an issue</a>
               </span>
             </p>
+
             {% comment %}<span class="meta"><a href="#">7 Comments</a> | <a href="#">By Admin</a></span>{% endcomment %}
             {% comment %}
             <div class="footer">
@@ -82,6 +82,14 @@ layout: default
           {% endcomment %}
         </section> <!-- end .blog-post-content -->
         <div class="blog-post-footer">
+          <p>
+            <span class="bold">Tags:</span>
+            {% for tag in page.tags %}
+
+              <a href="/{{ site.tag_dir }}/{{ tag }}/">#{{ tag | downcase }}</a>
+
+            {% endfor %}
+          </p>
           <div class="hr"></div>
           <div class="page-navigation">
             {% if page.previous.url %}
