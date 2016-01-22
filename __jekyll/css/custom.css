@@ -58,6 +58,10 @@ span.underline {
     width: 100%;
 }
 
+.single-blog-post .blog-header .content .date {
+    font-size: 14px;
+}
+
 .single-blog-post .blog-header .content {
     width: 100%;
     height: initial;
