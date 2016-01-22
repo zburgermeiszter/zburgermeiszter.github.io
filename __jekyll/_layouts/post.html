@@ -118,6 +118,10 @@ layout: default
           {% endcomment %}
         </div>
         <div class="blog-post-comments">
+          {% if page.comments %}
+            {% include comments.html %}
+          {% endif %}
+          {% comment %}
           <h4>7 Comments</h4>
           <div class="comment">
             <div class="inner clearfix">
@@ -152,7 +156,9 @@ layout: default
               </div> <!-- end .content -->
             </div> <!-- end .inner -->
           </div> <!-- end .comment -->
+          {% endcomment %}
         </div> <!-- end .blog-post-comments -->
+        {% comment %}
         <div class="leave-comment">
           <h4>Leave A Comment</h4>
           <div class="inner">
@@ -183,6 +189,7 @@ layout: default
             </form>
           </div> <!-- end .inner -->
         </div> <!-- end .leave-comment -->
+        {% endcomment %}
       </div> <!-- end .blog-post -->
       <div class="blog-details">
         {% comment %}

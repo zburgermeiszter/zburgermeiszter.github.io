@@ -149,6 +149,13 @@ span.underline {
     padding-top: 24px;
 }
 
+.single-blog-post .blog-post .blog-post-comments {
+    background: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 40px;
+}
+
 .blog-post .noshadow {
     box-shadow: none !important;
     -moz-box-shadow: none !important;

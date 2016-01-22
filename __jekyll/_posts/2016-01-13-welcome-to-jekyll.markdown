@@ -3,6 +3,8 @@ layout: post
 title:  "Welcome to Jekyll!"
 categories: jekyll update
 series: test
+disqus:
+  identifier: welcome-to-jekyll
 tags:
   - jekyll
   - syntax-highlight
