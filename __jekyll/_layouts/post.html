@@ -128,47 +128,11 @@ layout: default
         <div class="ad bottom white-shadowed">
           {% include ad/post-bottom.html %}
         </div>
+        {% if page.comments %}
         <div class="blog-post-comments white-shadowed">
-          {% if page.comments %}
-            {% include comments.html %}
-          {% endif %}
-          {% comment %}
-          <h4>7 Comments</h4>
-          <div class="comment">
-            <div class="inner clearfix">
-              <div class="image"><img src="images/comment01.jpg" alt="alt text" class="img-responsive"></div>
-              <div class="content">
-                <h5>Stone Gold</h5>
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placey eat facere possimus, omnis voluptas assumenda est.</p>
-                <span class="meta">25 March 2015 - 9.00AM</span>
-                <a href="#" class="reply">Reply<i class="fa fa-reply"></i></a>
-              </div> <!-- end .content -->
-            </div> <!-- end .inner -->
-            <div class="comment">
-              <div class="inner clearfix">
-                <div class="image"><img src="images/comment02.jpg" alt="alt text" class="img-responsive"></div>
-                <div class="content">
-                  <h5>Anna Salina</h5>
-                  <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placey eat facere possimus, omnis voluptas assumenda est.</p>
-                  <span class="meta">25 March 2015 - 9.00AM</span>
-                  <a href="#" class="reply">Reply<i class="fa fa-reply"></i></a>
-                </div> <!-- end .content -->
-              </div> <!-- end .inner -->
-            </div> <!-- end .comment -->
-          </div> <!-- end .comment -->
-          <div class="comment">
-            <div class="inner clearfix">
-              <div class="image"><img src="images/comment03.jpg" alt="alt text" class="img-responsive"></div>
-              <div class="content">
-                <h5>Tom Cruis</h5>
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placey eat facere possimus, omnis voluptas assumenda est.</p>
-                <span class="meta">25 March 2015 - 9.00AM</span>
-                <a href="#" class="reply">Reply<i class="fa fa-reply"></i></a>
-              </div> <!-- end .content -->
-            </div> <!-- end .inner -->
-          </div> <!-- end .comment -->
-          {% endcomment %}
+          {% include comments.html %}
         </div> <!-- end .blog-post-comments -->
+        {% endif %}
         {% comment %}
         <div class="leave-comment">
           <h4>Leave A Comment</h4>
