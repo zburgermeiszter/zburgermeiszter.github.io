@@ -22,6 +22,9 @@ layout: default
   <div class="container">
     <div class="single-blog-post">
       <div class="blog-post">
+        <div class="ad top white-shadowed">
+          {% include ad/head.html %}
+        </div>
         <header class="blog-header clearfix shadow">
           <div class="content noshadow">
             {% comment %}
@@ -86,7 +89,7 @@ layout: default
           <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placey eat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibus dalmo aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molstiae non-sec recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores aliasarat consequatur aut perferendis doloribus asperiores repellat</p>
           {% endcomment %}
         </section> <!-- end .blog-post-content -->
-        <div class="blog-post-footer">
+        <div class="blog-post-footer white-shadowed">
           <p>
             <span class="bold">Tags:</span>
             {% for tag in page.tags %}
@@ -122,7 +125,10 @@ layout: default
           </section>
           {% endcomment %}
         </div>
-        <div class="blog-post-comments">
+        <div class="ad bottom white-shadowed">
+          {% include ad/post-bottom.html %}
+        </div>
+        <div class="blog-post-comments white-shadowed">
           {% if page.comments %}
             {% include comments.html %}
           {% endif %}
@@ -196,7 +202,7 @@ layout: default
         </div> <!-- end .leave-comment -->
         {% endcomment %}
       </div> <!-- end .blog-post -->
-      <div class="blog-details">
+      {% comment %}<div class="blog-details"> {% endcomment %}
         {% comment %}
         <div class="section">
           <h5>Author Details</h5>
@@ -252,7 +258,7 @@ layout: default
           </div>
         </div> <!-- end .section -->
         {% endcomment %}
-      </div> <!-- end .blog-details -->
+      {% comment %}</div> <!-- end .blog-details -->{% endcomment %}
     </div> <!-- end .single-blog-post -->
   </div> <!-- end .container -->
 </article>
