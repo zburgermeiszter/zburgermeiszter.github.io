@@ -90,6 +90,7 @@ layout: default
           {% endcomment %}
         </section> <!-- end .blog-post-content -->
         <div class="blog-post-footer white-shadowed">
+          <div class="addthis_sharing_toolbox"></div>
           <p>
             <span class="bold">Tags:</span>
             {% for tag in page.tags %}
@@ -127,6 +128,9 @@ layout: default
         </div>
         <div class="ad bottom white-shadowed">
           {% include ad/post-bottom.html %}
+        </div>
+        <div class="ad bottom white-shadowed">
+          <div class="addthis_recommended_horizontal"></div>
         </div>
         {% if page.comments %}
         <div class="blog-post-comments white-shadowed">
